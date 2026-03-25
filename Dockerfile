@@ -27,6 +27,7 @@ FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
+    libgomp1 \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -r -s /bin/false whisper
 
